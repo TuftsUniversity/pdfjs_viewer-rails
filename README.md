@@ -32,7 +32,7 @@ This gem ships with three viewer styles:
   alt="reduced style"/>
 </p>
 
-**reduced not print**
+**reduced_minimal**
 
 <p align="center">
   <img
