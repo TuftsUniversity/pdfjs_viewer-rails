@@ -32,6 +32,15 @@ This gem ships with three viewer styles:
   alt="reduced style"/>
 </p>
 
+**reduced not print**
+
+<p align="center">
+  <img
+  src="https://raw.githubusercontent.com/senny/pdfjs_viewer-rails/master/doc/files/viewer_reduced_minimal.png"
+  alt="reduced_minimal style"/>
+</p>
+
+
 **minimal**
 
 <p align="center">

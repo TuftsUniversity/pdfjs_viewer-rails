@@ -10,5 +10,8 @@ module PdfjsViewer
     
     def reduced
     end
+
+    def reduced_minimal 
+    end
   end
 end

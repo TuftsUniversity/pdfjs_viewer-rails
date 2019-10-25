@@ -29,6 +29,18 @@ class ViewerTest < ActionDispatch::IntegrationTest
     assert_rendered_pdf output, screenshot: SANDBOX_PATH + "reduced_viewer.png"
   end
 
+  test "Reduced Minimal viewer" do
+    visit "/"
+    output = capture(:stdout) do
+      click_on "reduced minimal viewer"
+      assert has_selector?("#pdfjs_viewer-reduced_minimal")
+      assert_equal 1, all("#pdfjs_viewer-reduced_minimal").size
+      sleep @time_to_render
+    end
+
+    assert_rendered_pdf output, screenshot: SANDBOX_PATH + "reduced_viewer.png"
+  end
+
   test "Minimal viewer" do
     visit "/"
     output = capture(:stdout) do
