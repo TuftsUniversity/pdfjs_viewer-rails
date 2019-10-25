@@ -36,7 +36,7 @@ This gem ships with three viewer styles:
 
 <p align="center">
   <img
-  src="https://raw.githubusercontent.com/senny/pdfjs_viewer-rails/master/doc/files/viewer_reduced_minimal.png"
+  src="https://raw.githubusercontent.com/devisaah/pdfjs_viewer-rails/master/doc/files/viewer_reduced_minimal.png"
   alt="reduced_minimal style"/>
 </p>
 
