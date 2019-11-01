@@ -348,11 +348,13 @@ See https://github.com/adobe-type-tools/cmap-resources
     <%= render "pdfjs_viewer/viewer/printcontainer" %>
      <script type="text/javascript">
         document.onmousedown = disableRightclick;
+        document.onmouseup = disableRightclick;
         var message = "Right click not allowed !!";
         function disableRightclick(evt){
             if(evt.button == 2){
                 console.log(message);
-                return false;    
+                evt.preventDefault();
+                //return false;    
             }
         }
     </script>
