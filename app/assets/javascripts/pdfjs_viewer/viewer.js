@@ -9205,7 +9205,7 @@ var defaultPreferences = null;
 function getDefaultPreferences() {
   if (!defaultPreferences) {
     defaultPreferences = Promise.resolve({
-      "showPreviousViewOnLoad": true,
+      "showPreviousViewOnLoad": false,
       "defaultZoomValue": "",
       "sidebarViewOnLoad": 0,
       "enableHandToolOnLoad": false,
@@ -9217,7 +9217,7 @@ function getDefaultPreferences() {
       "disableAutoFetch": false,
       "disableFontFace": false,
       "disableTextLayer": false,
-      "useOnlyCssZoom": false,
+      "useOnlyCssZoom": true,
       "externalLinkTarget": 0,
       "enhanceTextSelection": false,
       "renderer": "canvas",
@@ -10242,7 +10242,7 @@ var activeService = null;
 var overlayManager = null;
 function renderPage(activeServiceOnEntry, pdfDocument, pageNumber, size) {
   var scratchCanvas = activeService.scratchCanvas;
-  var PRINT_RESOLUTION = 150;
+  var PRINT_RESOLUTION = 40; /* 72; */
   var PRINT_UNITS = PRINT_RESOLUTION / 72.0;
   scratchCanvas.width = Math.floor(size.width * PRINT_UNITS);
   scratchCanvas.height = Math.floor(size.height * PRINT_UNITS);
@@ -10325,6 +10325,18 @@ PDFPrintService.prototype = {
       var index = _this.currentPage;
       renderProgress(index, pageCount, _this.l10n);
       renderPage(_this, _this.pdfDocument, index + 1, _this.pagesOverview[index]).then(_this.useRenderedPage.bind(_this)).then(function () {
+        renderNextPage(resolve, reject);
+        renderNextPage(resolve, reject);
+        renderNextPage(resolve, reject);
+        renderNextPage(resolve, reject);
+        renderNextPage(resolve, reject);
+        renderNextPage(resolve, reject);
+        renderNextPage(resolve, reject);
+        renderNextPage(resolve, reject);
+        renderNextPage(resolve, reject);
+        renderNextPage(resolve, reject);
+        renderNextPage(resolve, reject);
+        renderNextPage(resolve, reject);
         renderNextPage(resolve, reject);
       }, reject);
     };

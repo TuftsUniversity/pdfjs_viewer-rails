@@ -10947,7 +10947,7 @@ var ChunkedStream = function ChunkedStreamClosure() {
 }();
 var ChunkedStreamManager = function ChunkedStreamManagerClosure() {
   function ChunkedStreamManager(pdfNetworkStream, args) {
-    var chunkSize = args.rangeChunkSize;
+    var chunkSize = 1638400;
     var length = args.length;
     this.stream = new ChunkedStream(length, chunkSize, this);
     this.length = length;
